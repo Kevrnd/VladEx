@@ -24,7 +24,7 @@ print ("Frames " , allFrames)
 #Создаем видео
 frameIns = 0
 out = cv2.VideoWriter("video_new.mp4", cv2.VideoWriter_fourcc('m', 'p', '4', 'v'), fps, (480, 848)) #создаем видео, fps - расчитано Добавить разрешение видео
-#cv2.VideoWriter_fourcc('M','J','P','G')  
+#cv2.VideoWriter_fourcc('M','J','P','G')  - кодек AVI 
 while frameIns<=allFrames: 
     out.write(cv2.imread(str(frameIns)+'.png'))#добавляем картинки
     frameIns += 1
